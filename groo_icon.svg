@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 48" width="44" height="48" role="img">
+  <title>Groo 아이콘</title>
+
+  <!-- 나무 세 원 -->
+  <circle cx="15" cy="28" r="13" fill="#7C3AED" opacity="0.50"/>
+  <circle cx="29" cy="28" r="13" fill="#7C3AED" opacity="0.50"/>
+  <circle cx="22" cy="17" r="13" fill="#7C3AED" opacity="0.78"/>
+
+  <!-- 나무 기둥 -->
+  <rect x="19" y="37" width="7" height="10" rx="2.5" fill="#5B21B6"/>
+
+</svg>
