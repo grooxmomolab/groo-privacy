@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groo 개인정보처리방침</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: linear-gradient(135deg, #C9E8FF 0%, #E8D9FF 100%);
+      min-height: 100vh;
+      color: #1F2937;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    /* 상단 헤더 */
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #7C3AED, #4C1D95);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+
+    .logo-text {
+      font-size: 26px;
+      font-weight: 800;
+      color: #4C1D95;
+      letter-spacing: -0.5px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #EEEDFE;
+      color: #3C3489;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .header-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1F2937;
+      margin-bottom: 8px;
+    }
+
+    .header-desc {
+      font-size: 14px;
+      color: #6B7280;
+      line-height: 1.6;
+    }
+
+    /* 카드 공통 */
+    .card {
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 12px;
+      backdrop-filter: blur(10px);
+    }
+
+    /* 안내 카드 */
+    .intro-card {
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+    }
+
+    .intro-card p {
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .intro-card .date {
+      font-size: 12px;
+      color: #6B7280;
+      font-weight: 500;
+    }
+
+    /* 섹션 카드 */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .section-number {
+      width: 26px;
+      height: 26px;
+      background: #7C3AED;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1F2937;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(0,0,0,0.08);
+      margin-bottom: 16px;
+    }
+
+    .section-content {
+      font-size: 13px;
+      color: #374151;
+      line-height: 1.9;
+      white-space: pre-line;
+    }
+
+    /* 문의 카드 */
+    .contact-card {
+      background: #EEEDFE;
+      border: 1px solid #D4C8FB;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .contact-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #4C1D95;
+      margin-bottom: 10px;
+    }
+
+    .contact-desc {
+      font-size: 13px;
+      color: #5B21B6;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .email-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #4C1D95;
+      text-decoration: none;
+    }
+
+    .email-box:hover {
+      background: #F5F3FF;
+    }
+
+    /* 푸터 */
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 12px;
+      color: #9CA3AF;
+      line-height: 1.6;
+    }
+
+    .footer strong {
+      color: #6B7280;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 24px 16px 48px; }
+      .header-title { font-size: 18px; }
+      .card { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 헤더 -->
+    <div class="header">
+      <div class="logo-row">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Groo</span>
+      </div>
+      <div class="badge">개인정보처리방침</div>
+      <h1 class="header-title">Groo 개인정보처리방침</h1>
+      <p class="header-desc">MoMo lab은 이용자의 개인정보를 소중히 여깁니다.</p>
+    </div>
+
+    <!-- 안내 카드 -->
+    <div class="intro-card">
+      <div class="badge" style="margin-bottom:10px;">안내</div>
+      <p>MoMo lab(이하 "회사")은 이용자의 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.</p>
+      <p class="date">시행일: 2025년 3월 1일</p>
+    </div>
+
+    <!-- 제1조 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="section-number">1</div>
+        <div class="section-title">제1조. 수집하는 개인정보 항목</div>
+      </div>
+      <div class="divider"></div>
+      <div class="section-content">Groo는 서비스 제공을 위해 아래의 개인정보를 수집합니다.
+
+【필수 수집 항목】
+• 이메일 주소 — 회원가입 및 로그인 식별
+• 닉네임 — 그룹 내 소유자 태그 표시
+
+【서비스 이용 중 생성되는 정보】
+• 자산·부채 항목명 및 금액
+• 그룹 정보 (그룹명, 그룹 구성원 목록)
+• 서비스 이용 기록, 접속 로그
+
+【수집하지 않는 정보】
+실명, 주민등록번호, 전화번호, 위치정보, 금융계좌번호, 카드번호는 일절 수집하지 않습니다.</div>
+    </div>
+
+    <!-- 제2조 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="section-number">2</div>
+        <div class="section-title">제2조. 개인정보의 수집 및 이용 목적</div>
+      </div>
+      <div class="divider"></div>
+      <div class="section-content">수집한 개인정보는 다음의 목적으로만 이용됩니다.
+
+• 회원 식별 및 로그인 인증
+• 그룹 자산 공동 관리 서비스 제공
+• 서비스 개선 및 신규 기능 개발
+• 불법 이용 방지 및 서비스 보안 유지
+
+수집 목적 외의 용도로 이용하거나 제3자에게 제공하지 않습니다.</div>
+    </div>
+
+    <!-- 제3조 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="section-number">3</div>
+        <div class="section-title">제3조. 개인정보의 보유 및 이용 기간</div>
+      </div>
+      <div class="divider"></div>
+      <div class="section-content">회원 탈퇴 시 또는 개인정보 수집·이용 목적이 달성된 후에는 지체 없이 해당 정보를 파기합니다.
+
+【보유 기간】
+• 회원 가입 시부터 탈퇴 시까지
+
+【탈퇴 시 삭제 범위】
+• 입력된 모든 자산·부채 데이터
+• 그룹 정보 및 그룹 내 본인 데이터
+• Firebase Authentication 계정
+• 닉네임 등 프로필 정보
+
+단, 관계 법령에 의해 보존이 필요한 경우 해당 법령에서 정한 기간 동안 보관할 수 있습니다.</div>
+    </div>
+
+    <!-- 제4조 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="section-number">4</div>
+        <div class="section-title">제4조. 개인정보의 제3자 제공</div>
+      </div>
+      <div class="divider"></div>
+      <div class="section-content">MoMo lab은 이용자의 개인정보를 원칙적으로 제3자에게 제공하지 않습니다.
+
+다만, 아래의 경우에는 예외로 합니다.
+• 이용자가 사전에 동의한 경우
+• 법령의 규정에 의거하거나 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</div>
+    </div>
+
+    <!-- 제5조 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="section-number">5</div>
+        <div class="section-title">제5조. 개인정보 처리 위탁</div>
+      </div>
+      <div class="divider"></div>
+      <div class="section-content">Groo는 서비스 제공을 위해 아래와 같이 개인정보 처리를 위탁하고 있습니다.
+
+【위탁 업체 및 업무 내용】
+• Google Firebase (Google LLC)
+  - 위탁 업무: 회원 인증(Firebase Authentication), 데이터 저장(Cloud Firestore)
+  - 보유 기간: 회원 탈퇴 시까지
+
+위탁 계약 시 개인정보가 안전하게 관리될 수 있도록 관련 사항을 규정하고 있습니다.</div>
+    </div>
+
+    <!-- 제6조 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="section-number">6</div>
+        <div class="section-title">제6조. 이용자의 권리와 행사 방법</div>
+      </div>
+      <div class="divider"></div>
+      <div class="section-content">이용자는 언제든지 아래의 권리를 행사할 수 있습니다.
+
+• 개인정보 열람 요청
+• 개인정보 정정·삭제 요청
+• 개인정보 처리 정지 요청
+• 회원 탈퇴(개인정보 즉시 삭제)
+
+【권리 행사 방법】
+앱 내 [드로어 메뉴 → 회원 탈퇴] 기능을 통해 직접 탈퇴 및 데이터 삭제가 가능합니다.
+그 외 문의사항은 아래 개인정보 보호책임자에게 연락해 주시기 바랍니다.</div>
+    </div>
+
+    <!-- 제7조 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="section-number">7</div>
+        <div class="section-title">제7조. 개인정보의 파기 절차 및 방법</div>
+      </div>
+      <div class="divider"></div>
+      <div class="section-content">개인정보는 수집 및 이용 목적이 달성된 후 즉시 파기합니다.
+
+【파기 방법】
+• 전자적 파일 형태: 복원이 불가능한 방법으로 영구 삭제
+• Firebase Authentication 계정 완전 삭제
+• Firestore 저장 데이터 완전 삭제
+
+회원 탈퇴 요청 즉시 모든 데이터가 자동으로 파기됩니다.</div>
+    </div>
+
+    <!-- 제8조 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="section-number">8</div>
+        <div class="section-title">제8조. 개인정보 보호책임자</div>
+      </div>
+      <div class="divider"></div>
+      <div class="section-content">개인정보 처리에 관한 업무를 총괄하고, 개인정보 처리와 관련한 이용자의 불만 처리 및 피해 구제를 담당합니다.
+
+【개인정보 보호책임자】
+• 운영팀: MoMo lab
+• 이메일: grooxmomolab@gmail.com
+
+개인정보 침해에 대한 신고나 상담이 필요하신 경우 아래 기관에 문의하실 수 있습니다.
+• 개인정보보호위원회: www.pipc.go.kr / 국번없이 182
+• 한국인터넷진흥원 개인정보침해신고센터: privacy.kisa.or.kr / 국번없이 118</div>
+    </div>
+
+    <!-- 제9조 -->
+    <div class="card">
+      <div class="section-header">
+        <div class="section-number">9</div>
+        <div class="section-title">제9조. 개인정보처리방침의 변경</div>
+      </div>
+      <div class="divider"></div>
+      <div class="section-content">이 개인정보처리방침은 법령, 정책 또는 서비스 변경사항을 반영하기 위해 수정될 수 있습니다.
+
+변경 시 앱 내 공지 또는 이메일을 통해 사전에 안내드립니다.
+
+【시행일】
+본 방침은 2025년 3월 1일부터 시행됩니다.</div>
+    </div>
+
+    <!-- 문의 카드 -->
+    <div class="contact-card">
+      <div class="contact-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#7C3AED">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        개인정보 관련 문의
+      </div>
+      <p class="contact-desc">개인정보 처리에 관한 문의사항이 있으시면<br>아래 이메일로 연락해 주세요.</p>
+      <a href="mailto:grooxmomolab@gmail.com" class="email-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#7C3AED">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+        </svg>
+        grooxmomolab@gmail.com
+      </a>
+    </div>
+
+    <!-- 푸터 -->
+    <div class="footer">
+      <strong>MoMo lab</strong> · Groo<br>
+      본 방침은 2025년 3월 1일부터 시행됩니다.
+    </div>
+
+  </div>
+</body>
+</html>
